@@ -1,0 +1,21 @@
+<button (click)="print()">Fit text and print</button>
+
+
+<div class="wrap">
+  <ng-container *ngFor="let playSet of playSets">
+    <ng-container *ngFor="let _ of [].constructor(playSet.copies)" [ngSwitch]="playSet.cardRarity.card.type.name">
+      <ng-container *ngSwitchCase="'Character'">
+        <app-character-insert [cardRarity]="playSet.cardRarity"></app-character-insert>
+      </ng-container>
+      <ng-container *ngSwitchCase="'Event'">
+        <app-event-insert [cardRarity]="playSet.cardRarity"></app-event-insert>
+      </ng-container>
+      <ng-container *ngSwitchCase="'Climax'">
+        <app-climax-insert [cardRarity]="playSet.cardRarity"></app-climax-insert>
+      </ng-container>
+    </ng-container>
+  </ng-container>
+</div>
+
+
+

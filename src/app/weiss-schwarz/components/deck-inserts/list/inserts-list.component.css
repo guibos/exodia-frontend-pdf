@@ -1,0 +1,93 @@
+
+.wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+:host ::ng-deep .text {
+  position: absolute;
+  text-align: justify;
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+}
+
+:host ::ng-deep b {
+  font-weight: 900;
+}
+
+:host ::ng-deep .card {
+  border: 0.5px solid black;
+  margin-right: 2mm;
+  padding: 0.25mm;
+  break-inside: avoid;
+}
+
+:host ::ng-deep .front {
+  position: relative;
+}
+
+:host ::ng-deep .lower-layout {
+  width: 100%;
+  position: absolute;
+  bottom: 0mm;
+}
+
+:host ::ng-deep .abilities img {
+  display: inline-block !important;
+  vertical-align: bottom;
+  height: 1.984375mm;
+
+}
+
+:host ::ng-deep .external-text-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+:host ::ng-deep .external-text-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+:host ::ng-deep .card-id {
+  width: 11.641667mm;
+  height: 1.5875mm;
+  text-align: left;
+  font-size: 1.058333mm;
+  font-weight: 700;
+}
+
+:host ::ng-deep .card-name {
+  color: white;
+  font-weight: bold;
+  -webkit-print-color-adjust: exact !important;
+  color-adjust: exact !important;
+  height: 2.38125mm;
+  width: 29.104167mm;
+}
+
+:host ::ng-deep .abilities {
+  position: absolute;
+  font-size: 1.5875mm;
+  background-color: rgb(255, 255, 255, 0.75);
+  -webkit-print-color-adjust: exact !important;
+  border-top-color: black;
+  border-top-style: solid;
+  border-top-width: 0.5px;
+  padding-top: 2.5px;
+}
+
+
+:host ::ng-deep .ability-category {
+  -webkit-print-color-adjust: exact !important;
+  color-adjust: exact;
+  padding: 0px 0.5px;
+  background-color: black;
+  color: white;
+  border-radius: 0.25em;
+
+  line-height: 1.25;
+}
+

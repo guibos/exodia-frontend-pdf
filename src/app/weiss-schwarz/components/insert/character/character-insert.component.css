@@ -1,0 +1,96 @@
+@media print {
+  .ability-category {
+    background-color: black !important;
+    -webkit-print-color-adjust: exact;
+  }
+}
+
+.card {
+  width: var(--cardWidth);
+}
+
+:host .front {
+  height: var(--frontHeight);
+}
+
+.back {
+  height: var(--cardHeight);
+}
+
+.card-id {
+  left: 10.20833385%;
+  bottom: calc(var(--cardWidth) * 0.13322834645669293);
+
+}
+
+.card-name {
+  bottom: calc(var(--cardWidth) * 0.10416666141732282);
+  left: 34.583333858267714%;
+}
+
+.abilities {
+  bottom: calc(var(--cardWidth) * 0.16666666141732284);
+  left: 5.0%;
+  right: 5.0%;
+}
+
+.card-power {
+  text-align: center;
+  color: white;
+  -webkit-print-color-adjust: exact !important;
+  color-adjust: exact !important;
+  height: calc(var(--cardWidth) * 0.05833333858267716);
+  bottom: calc(var(--cardWidth) * 0.06666666141732283);
+  left: 7.083333858267717%;
+  right: 72.48333279999999%;
+  font-size: calc(var(--cardWidth) * 0.05833333858267716);
+  font-weight: bold;
+}
+
+.soul {
+  height: calc(var(--cardWidth) * 0.045);
+  position: absolute;
+  left: 28.750000000000004%;
+  bottom: calc(var(--cardWidth) * 0.049999999999999996);
+
+}
+
+.card-attribute-slot {
+  position: absolute;
+  height: calc(var(--cardWidth) * 0.0375);
+  bottom: calc(var(--cardWidth) * 0.049999999999999996);
+}
+
+.card-attribute-slot-1 {
+  left: 79.0%;
+}
+
+.card-attribute-slot-2 {
+  left: 61.0%;
+}
+
+.card-attribute-slot-3 {
+  left: 43.0%;
+}
+
+.card-attribute-text {
+  font-weight: bold;
+  position: absolute;
+  height: calc(var(--cardWidth) * 0.024999999999999998);
+  bottom: calc(var(--cardWidth) * 0.05833333858267716);
+}
+
+.card-attribute-text-1 {
+  left: 79.41666614173228%;
+  right: 3.916667716535426%;
+}
+
+.card-attribute-text-2 {
+  left: 61.41666614173229%;
+  right: 21.916667716535436%;
+}
+
+.card-attribute-text-3 {
+  left: 43.416666141732286%;
+  right: 39.91666771653543%;
+}

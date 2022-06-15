@@ -1,0 +1,18 @@
+<div class="card">
+  <div class="front">
+    <img class="lower-layout" src="{{this.cardRarity.lowerLayout}}">
+    <div class="card-id text">
+      {{this.cardRarity.cardNumberPhysical}}
+    </div>
+    <div [activateOnResize]="true" [fittext]="true"
+         [maxFontSize]="7" [minFontSize]="1" class="external-text-box card-name text">
+      <div [activateOnResize]="true" [fittext]="true" [minFontSize]="1">{{this.cardRarity.card.name}}</div>
+    </div>
+    <div class="abilities text" innerHTML={{this.cardRarity.card.abilities}}>
+
+    </div>
+  </div>
+  <div class="back">
+
+  </div>
+</div>
