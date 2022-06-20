@@ -1,0 +1,170 @@
+@media print {
+  .ability-category {
+    background-color: black !important;
+    print-color-adjust: exact;
+  }
+}
+
+.card-id {
+  left: var(--cardIdLeft);
+  bottom: var(--cardIdBottom);
+  height: var(--cardIdHeight);
+  text-align: left;
+  font-size: 1.058333mm;
+  font-weight: 700;
+
+}
+
+.card-name {
+  bottom: var(--cardNameBottom);
+  left: var(--cardNameLeft);
+  right: var(--cardNameRight);
+  height: 2.38125mm;
+  color: white;
+  font-weight: bold;
+  print-color-adjust: exact !important;
+}
+
+.abilities {
+  bottom: var(--abilitiesBottom);
+  left: var(--abilitiesLeft);
+  right: var(--abilitiesRight);
+  position: absolute;
+  font-size: 1.5875mm;
+  background-color: rgb(255, 255, 255, 0.90);
+  print-color-adjust: exact !important;
+  border-top-color: black;
+  border-top-style: var(--abilitiesBorderTopStyle);
+  border-top-width: var(--abilitiesBorderTopWidth);
+  padding-top: 2.5px;
+  padding-left: var(--abilitiesPaddingLeft);
+  padding-right: var(--abilitiesPaddingRight);
+  padding-bottom: var(--abilitiesPaddingBottom);
+  border-radius: 1.5px;
+
+}
+
+.card-power {
+  text-align: center !important;
+  color: white;
+  print-color-adjust: exact !important;
+  height: calc(var(--cardWidth) * 0.05833333858267716);
+  bottom: calc(var(--cardWidth) * 0.06666666141732283);
+  left: 7.083333858267717%;
+  right: 72.48333279999999%;
+  font-size: calc(var(--cardWidth) * 0.05833333858267716);
+  font-weight: bold;
+}
+
+.soul {
+  height: calc(var(--cardWidth) * 0.045);
+  position: absolute;
+  left: 28.750000000000004%;
+  bottom: calc(var(--cardWidth) * 0.049999999999999996);
+
+}
+
+.card-attribute-slot {
+  position: absolute;
+  height: calc(var(--cardWidth) * 0.0375);
+  bottom: calc(var(--cardWidth) * 0.049999999999999996);
+}
+
+.card-attribute-slot-1.card-attribute-slot-size-3 {
+  left: 79.0%;
+}
+
+.card-attribute-slot-2.card-attribute-slot-size-3 {
+  left: 61.0%;
+}
+
+.card-attribute-slot-3.card-attribute-slot-size-3 {
+  left: 43.0%;
+}
+
+.card-attribute-slot-1.card-attribute-slot-size-2 {
+  left: 69.5%;
+}
+
+.card-attribute-slot-2.card-attribute-slot-size-2 {
+  left: 46.75%;
+}
+
+.card-attribute-text {
+  font-weight: bold;
+  position: absolute;
+  height: calc(var(--cardWidth) * 0.024999999999999998);
+  bottom: calc(var(--cardWidth) * 0.05833333858267716);
+}
+
+.card-attribute-text-1.card-attribute-slot-size-3 {
+  left: 79.41666614173228%;
+  right: 3.916667716535426%;
+}
+
+.card-attribute-text-2.card-attribute-slot-size-3 {
+  left: 61.41666614173229%;
+  right: 21.916667716535436%;
+}
+
+.card-attribute-text-3.card-attribute-slot-size-3 {
+  left: 43.416666141732286%;
+  right: 39.91666771653543%;
+}
+
+.card-attribute-text-1.card-attribute-slot-size-2 {
+  left: 70%;
+  right: 8.5%;
+}
+
+.card-attribute-text-2.card-attribute-slot-size-2 {
+  left: 47.5%;
+  right: 31.5%;
+}
+
+
+
+::ng-deep .text {
+  position: absolute;
+  text-align: justify;
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+}
+
+.card {
+  border: 0.5px solid black;
+  margin-right: 2mm;
+  padding: 0.5mm;
+  break-inside: avoid;
+}
+
+.lower-layout {
+  width: 100%;
+  position: absolute;
+  bottom: 0mm;
+}
+
+.external-text-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+::ng-deep .ability-category {
+  print-color-adjust: exact !important;
+  padding: 0.0mm 0.25mm;
+  background-color: black;
+  color: white;
+  border-radius: 0.25em;
+  line-height: 1.25;
+  font-weight: 450
+}
+
+::ng-deep .abilities img {
+  display: inline-block !important;
+  vertical-align: bottom;
+  height: 1.984375mm;
+
+}
+
+

@@ -1,0 +1,10 @@
+.card {
+  float: left;
+  width: var(--width);
+  border: 1px solid;
+  border-bottom-right-radius: var(--border);
+  border-bottom-left-radius: var(--border);
+  break-inside: avoid;
+  margin: 1mm;
+
+}

@@ -9,18 +9,20 @@ export class CardRarity {
     public card: Card,
     public rarity: Rarity,
     public cardNumberPhysical: string,
+    public imageEn: string,
+    public imageJp: string
   ) {
   }
 
   get lowerLayout(): string {
-    let type: string = this.card.type.name.toString().toLowerCase()
+    let type: string = this.card.cardType.name.toString().toLowerCase()
     let colour: string = this.card.colour.name.toString().toLowerCase()
     let side: string
-    if (this.card.release.schwarz && this.card.release.weiss) {
+    if (this.card.product.release.schwarz && this.card.product.release.weiss) {
       throw "Side Weiss Schwarz is not implemented"
-    } else if (this.card.release.schwarz) {
+    } else if (this.card.product.release.schwarz) {
       side = 'schwarz'
-    } else if (this.card.release.weiss) {
+    } else if (this.card.product.release.weiss) {
       side = 'weiss'
     } else {
       throw "Non side is not implemented"

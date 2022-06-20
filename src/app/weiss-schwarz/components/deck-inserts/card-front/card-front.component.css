@@ -1,0 +1,8 @@
+.front{
+  width: 100%;
+  height: var(--height);
+  position: relative;
+  background-image: var(--image);
+  background-position: bottom;
+  background-size: cover;
+}

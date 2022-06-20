@@ -1,0 +1,19 @@
+.card{
+  float: left;
+  break-inside: avoid;
+
+  height: var(--height);
+  width: var(--width);
+  position: relative;
+  margin: 2mm;
+}
+
+.content {
+  width: var(--contentWidth);
+  height: var(--contentHeight);
+  background-image: var(--image);
+  background-position: bottom;
+  background-size: cover;
+  transform: var(--transform);
+  transform-origin: 0%;
+}

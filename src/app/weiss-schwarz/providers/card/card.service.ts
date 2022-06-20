@@ -5,6 +5,8 @@ import {CardRarity} from "../../classes/card-rarity/card-rarity";
 import {DomSanitizer} from "@angular/platform-browser";
 import {Card} from "../../classes/card/card";
 import {environment} from "../../../../environments/environment";
+import {CardType} from "../../classes/card-type/card-type";
+import {CardTypeEnum} from "../../classes/card-type/card-type-enum";
 
 
 @Injectable({
@@ -14,16 +16,21 @@ export class CardService {
   constructor(private http: HttpClient, private sanitizer: DomSanitizer) {
   }
 
-  getCardRarities(cardRarityIds: number[]): Observable<CardRarity[]> {
+  public getCardRarities(productsIds: number[], cardRarityIds: number[]): Observable<CardRarity[]> {
     let httpParams = new HttpParams();
-    httpParams = httpParams.append('id__in', cardRarityIds.join());
+    if (cardRarityIds) {
+      httpParams = httpParams.append('id__in', cardRarityIds.join());
+    }
+    if (productsIds) {
+      httpParams = httpParams.append('product__in', productsIds.join());
+    }
+
     let cardResponseObservable: Observable<CardRarity[]> = this.http.get<CardRarity[]>(
       environment.API_URL, {
         params: httpParams
       })
     return cardResponseObservable.pipe(map(res => _cardRaritiesParser(res, this.sanitizer)))
   }
-
 }
 
 
@@ -43,16 +50,23 @@ function _cardRarityParser(cardRarity: CardRarity, sanitizer: DomSanitizer): Car
     cardRarity.pk,
     _cardParser(cardRarity.card, sanitizer),
     cardRarity.rarity,
-    cardRarity.cardNumberPhysical
+    cardRarity.cardNumberPhysical,
+    cardRarity.imageEn,
+    cardRarity.imageJp
   )
 }
 
 function _cardParser(card: Card, sanitizer: DomSanitizer): Card {
+  let cardType = new CardType(
+    card.cardType.id,
+    CardTypeEnum[card.cardType.name]
+  )
+
   return new Card(
     card.titleCode,
-    card.release,
-    card.releaseType,
+    card.product,
     card.cardId,
+    card.canonicalCard,
     card.rarities,
     card.cardNumber,
     card.name,
@@ -62,7 +76,7 @@ function _cardParser(card: Card, sanitizer: DomSanitizer): Card {
     card.abilities,
     card.cost,
     card.level,
-    card.type,
+    cardType,
     card.power,
     card.triggers,
     sanitizer

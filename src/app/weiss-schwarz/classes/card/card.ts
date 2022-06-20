@@ -4,9 +4,10 @@ import {Rarity} from "../rarity/rarity";
 import {Colour} from "../colour/colour";
 import {ReleaseType} from "../release-type/release-type";
 import {Attribute} from "../attribute/attribute";
-import {TypeData} from "../type/type-data";
+import {CardType} from "../card-type/card-type";
 import {Trigger} from "../trigger/trigger";
 import {DomSanitizer, SafeHtml} from "@angular/platform-browser";
+import {Product} from "../product/product";
 
 
 export class Card {
@@ -15,9 +16,9 @@ export class Card {
 
   constructor(
     public titleCode: TitleCode,
-    public release: Release,
-    public releaseType: ReleaseType,
+    public product: Product,
     public cardId: number,
+    public canonicalCard: boolean,
     public rarities: Rarity[],
     public cardNumber: string,
     public name: string,
@@ -27,7 +28,7 @@ export class Card {
     public abilities: string,
     public cost: number,
     public level: number,
-    public type: TypeData,
+    public cardType: CardType,
     public power: number,
     public triggers: Trigger[],
     private sanitizer: DomSanitizer
@@ -44,7 +45,7 @@ export class Card {
 
   get attribute1Image(): string {
     if (this.attributes.length >= 1) {
-      return `${this.commonUrl}/attributes/set/${this.release.maxAttributes}.png`
+      return `${this.commonUrl}/attributes/set/${this.product.release.maxAttributes}.png`
     } else {
       return ''
     }
@@ -52,7 +53,7 @@ export class Card {
 
   get attribute2Image(): string {
     if (this.attributes.length >= 2) {
-      return `${this.commonUrl}/attributes/set/${this.release.maxAttributes}.png`
+      return `${this.commonUrl}/attributes/set/${this.product.release.maxAttributes}.png`
     } else {
       return ''
     }
@@ -60,7 +61,7 @@ export class Card {
 
   get attribute3Image(): string {
     if (this.attributes.length >= 3) {
-      return `${this.commonUrl}/attributes/set/${this.release.maxAttributes}.png`
+      return `${this.commonUrl}/attributes/set/${this.product.release.maxAttributes}.png`
     } else {
       return ''
     }

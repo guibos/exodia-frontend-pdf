@@ -1,0 +1,8 @@
+<button (click)="print()" class="no-print">Fit text and print</button>
+
+
+<div>
+    <ng-container *ngFor="let cardRarity of cardRarities">
+      <app-album-card [cardRarity]="cardRarity" ></app-album-card>
+    </ng-container>
+</div>
